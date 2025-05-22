@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: calc(100vh - 110px);
+}
+
+
+
+header {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+header img {
+    height: 50px;
+}
+
+
+
+#nav-button{
+    background-color: #ffffff00;
+    color: #444444;
+    font-size: 220%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+#nav-bar {
+    position: fixed;
+    right: 0;
+    top: 90px;
+    width: 0px;
+    height: 100vh;
+    background-color: #ffffff;
+    font-size: 30px;
+    padding-top: 10px;
+    transition: width 0.7s ease;
+    z-index: 99;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+}
+#nav-bar a {
+    color: #444444;
+    text-decoration: none;
+    margin: 20px;
+    width: auto;
+    align-items: center;
+    border-bottom: 3px solid white;
+    display: block;
+}
+#nav-bar a:hover{
+    font-weight: bold;
+}
+#nav-bar div {
+    padding-left: 25px;
+}
+#nav-bar-sub a{
+    border-bottom: none;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: 98;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+#content {
+    margin: 2%;
+}
+#content h1 {
+    font-size: 6vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    margin-top: 120px;
+}
+
+
+
+#banner {
+    margin-top: 90px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 90px);
+    }
+#banner img {
+    min-width: 100vw;
+    min-height: 100%;
+}
+
+
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+#image-grid-item-landscape {
+    width: 100%;
+    aspect-ratio: 16/9;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+#image-grid-item-portrait {
+    width: 100%;
+    aspect-ratio: 9/16;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+
+
+#footer {
+    background-color: #252525;
+    color: rgb(185, 185, 185);
+    padding: 10px 30px;
+    height: 60px;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 98;
+}
